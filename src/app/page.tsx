@@ -60,10 +60,10 @@ author->
   } | order(_createdAt desc) [0...20]
   `;
 
+export const revalidate = 3600; // revalidate at most every hour
+
 const Blog = async () => {
   const posts = await client.fetch<Post[]>(query);
-
- 
 
   return (
     <div>

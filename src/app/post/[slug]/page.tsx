@@ -8,21 +8,33 @@ import { urlForImage } from "../../../../sanity/lib/image";
 import { PortableText } from "@portabletext/react";
 import RichTextComponents from "@/app/components/RichTextComponents";
 
-const query = groq`
+type SinglePostProps = {
+  params: { slug: string };
+};
+
+export const revalidate = 3600; // revalidate at most every hour
+
+export async function generateStaticParams() {
+  const query = groq`
+*[_type == "post"]  {
+  slug
+  } [0...20]
+  `;
+  const posts = await client.fetch<Post[]>(query);
+
+  return posts.map((post) => ({
+    slug: post.slug.current,
+  }));
+}
+
+const SinglePost = async ({ params: { slug } }: SinglePostProps) => {
+  const query = groq`
 *[_type == "post" && slug.current == $slug][0]  {
   ...,
 categories[]->,
 author->
   } 
   `;
-
-type SinglePostProps = {
-  params: { slug: string };
-};
-
-export const revalidate = 3600 // revalidate at most every hour
-
-const SinglePost = async ({ params: { slug } }: SinglePostProps) => {
   const post = await client.fetch<Post>(query, {
     slug,
   });
