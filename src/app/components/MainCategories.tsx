@@ -59,7 +59,7 @@ const MainCategories = () => {
         <div>
           <div className="text-center pb-20">
             <div className="flex justify-center flex-col  lg:flex-row  mb-3">
-              <h2 className="mb-4 font-normal">100% organic</h2>{" "}
+              <h2 className="mb-4 ">100% organic</h2>{" "}
               <h2 className="mb-4 px-2 text-primary">
                 <TypeAnimation
                   sequence={[

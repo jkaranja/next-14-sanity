@@ -94,9 +94,9 @@ const SingleProduct = ({ product }: SingleProductProps) => {
         </div>
       </Banner>
 
-      <div className=" flex justify-center px-8  py-20  ">
+      <div className=" flex justify-center px-4  py-20  ">
         <div className="md:w-[80vw] ">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="">
               <div className="h-[300px] mb-4 relative">
                 <Image
@@ -164,6 +164,7 @@ const SingleProduct = ({ product }: SingleProductProps) => {
                 <p>Weight: </p>
                 {product.weight.map((weight, i) => (
                   <Button
+                    size="sm"
                     variant="default"
                     key={i}
                     className="text-accent-foreground "
@@ -190,11 +191,11 @@ const SingleProduct = ({ product }: SingleProductProps) => {
                 <p>Vendor: Aurelia</p>
               </div>
 
-              <div className="flex justify-between bg-muted  font-medium p-3">
-                <h3 className="text-muted-foreground">Total</h3>
-                <h3 className="text-muted-foreground">
+              <div className="flex justify-between bg-muted  font-medium p-3 border-t border-border-light">
+                <h5 className="text-muted-foreground">Total</h5>
+                <h5 className="text-muted-foreground">
                   ${options.units * product.discountedPrice}
-                </h3>
+                </h5>
               </div>
 
               <div className="flex   gap-x-3  ">

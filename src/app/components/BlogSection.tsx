@@ -65,14 +65,14 @@ const BlogSection = ({ posts }: BlogSectionProps) => {
       <div className="md:w-[80vw] ">
         <div className=" pb-12 " data-aos="zoom-in">
           <div className="flex justify-center">
-            <h2 className="mb-4 font-normal">Our</h2>{" "}
+            <h2 className="mb-4">Our</h2>{" "}
             <h2 className="mb-4 px-2 text-primary">Blog</h2>
           </div>
         </div>
 
-        <div className="">
+        <div className="flex flex-col items-center ">
           <Carousel
-            className="w-full "
+            className="max-w-[70vw]  sm:max-w-[80vw] lg:max-w-[96vw]"
             opts={{
               align: "start",
             }}

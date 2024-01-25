@@ -67,13 +67,13 @@ const WhyUs = () => {
               {
                 content: [
                   {
-                    icon:<LeafyGreen className="mr-3 h-10 w-10 " />,
+                    icon: <LeafyGreen className="mr-3 h-10 w-10 " />,
                     heading: "Organic Certificated",
                     content:
                       "Our products are organically certified products. Every item is meticulously verified, guaranteeing you pure, sustainable, and genuinely organic choices.",
                   },
                   {
-                    icon: <Tractor  className="mr-3 h-10 w-10 " />,
+                    icon: <Tractor className="mr-3 h-10 w-10 " />,
                     heading: "Top Rank Farms",
                     content:
                       "Indulge in excellence with Top Rank Farms. Our organic products are cultivated with passion, ensuring the highest quality and purity.",
@@ -83,13 +83,13 @@ const WhyUs = () => {
               {
                 content: [
                   {
-                    icon: <Truck  className="mr-3 h-10 w-10 " />,
+                    icon: <Truck className="mr-3 h-10 w-10 " />,
                     heading: "Fast Delivery",
                     content:
                       "Your organic essentials reach you promptly, ensuring freshness and convenience. Shop hassle-free today!                                           Experience swift satisfaction with our express delivery.",
                   },
                   {
-                    icon: <HeartHandshake  className="mr-3 h-10 w-10 " />,
+                    icon: <HeartHandshake className="mr-3 h-10 w-10 " />,
                     heading: "Trusted Products",
                     content:
                       "Choose us for premium organic goods. Our commitment to quality ensures you get trustworthy, sustainable, and delightful products every time.",
@@ -97,7 +97,7 @@ const WhyUs = () => {
                 ],
               },
             ].map((item, index) => (
-              <div key={index}>
+              <div key={index} data-aos="fade-up" data-aos-delay={index * 100}>
                 {item.content.map(({ icon, heading, content }, i) => (
                   <div
                     className={clsx(

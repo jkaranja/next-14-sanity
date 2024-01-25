@@ -58,18 +58,19 @@ const HeroSection = () => {
         backgroundImage:
           theme === "dark"
             ? "linear-gradient(to bottom, hsla(20, 14.3%, 4.1%, 1) 10%, hsla(20, 14.3%, 4.1%, 0.9) 50%, hsla(20, 14.3%, 4.1%, 0.6)), url('/hero.webp')"
-            : "linear-gradient(to bottom, hsla(150, 80%, 47%, 0.8), hsla(150, 80%, 47%, 0.1), hsla(150, 80%, 47%, 0.2), url('/hero.webp')",
+            : "linear-gradient(to bottom, hsla(150, 80%, 47%, 0.6) 5%, hsla(150, 80%, 47%, 0.2), hsla(150, 80%, 47%, 0) 20%), url('/hero.webp')",
       }}
-      className="bg-primary  bg-fixed bg-top bg-no-repeat bg-cover  h-[90vh] flex flex-col justify-center"
+      className="bg-primary  bg-fixed bg-top bg-no-repeat bg-cover  h-[90vh] flex flex-col md:flex-row  justify-center md:justify-around items-center  px-4 "
     >
-      <div className="md:max-w-[30vw]   flex flex-col gap-y-8 items-start  ml-6 lg:ml-40 xl:ml-60 bg-primary/55 ">
+      <div className="md:basis-3/6 xl:basis-5/12  flex flex-col gap-y-8 items-start  bg-black/55 p-10">
         <h2 className="text-secondary-foreground line-clamp-3">
-          Shop fresh fruits and vegetables
+          Shop Fresh Fruits, Vegetables, and More
         </h2>
 
         <p className="text-secondary-foreground">
-          Organic milk-cheese is the best nutritious cheese that you will love
-          and carve for it. Get the best of it now!
+          Explore our selection of premium organic food items, carefully sourced
+          and thoughtfully chosen to nourish your body and delight your taste
+          buds.
         </p>
 
         <Button
@@ -81,15 +82,15 @@ const HeroSection = () => {
         </Button>
       </div>
 
-      {/* <div className="py-6   ">
-        <Image
+      <div className="p-6   basis-3/6  hidden lg:block ">
+        {/* <Image
           src="https://cdn.pixabay.com/photo/2013/07/13/01/22/vegetables-155616_1280.png"
           className="object-contain object-top rounded-md  h-[600px] w-[100%]"
           alt="Organic"
           height={300}
           width={600}
-        />
-      </div> */}
+        /> */}
+      </div>
     </div>
   );
 };

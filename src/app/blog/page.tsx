@@ -141,10 +141,15 @@ const Blog = () => {
               </div>
 
               <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-5">
-                {posts.map((post) => (
-                  <Card className="group  border-border-light" key={post._id}>
+                {posts.map((post, index) => (
+                  <Card
+                    className="group  border-border-light"
+                    key={post._id}
+                    data-aos="fade-up"
+                    data-aos-delay={index * 100}
+                  >
                     <CardHeader className="px-0 pt-0">
-                      <div className=" overflow-hidden rounded-t-md">
+                      <div className=" overflow-hidden rounded-t-md ">
                         <Image
                           className="cursor-pointer object-cover rounded-t-md  h-[300px] w-full  hover:scale-105 transition-all duration-300"
                           src={urlForImage(post.mainImage)}
@@ -156,7 +161,7 @@ const Blog = () => {
                           }
                         />
                       </div>
-                      <div className="  flex   gap-x-4 px-4">
+                      <div className="  flex   gap-x-4 px-4 py-2">
                         {post.categories.map((cat) => (
                           <Badge
                             key={cat._id}

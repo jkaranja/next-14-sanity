@@ -95,8 +95,13 @@ const Sidebar = () => {
         </CardHeader>
         <CardContent className="flex flex-col gap-y-4">
           <div>{isPending && <div className="animate-pulse">loading</div>}</div>
-          {posts.map((post) => (
-            <div className="  flex gap-x-6   " key={post._id}>
+          {posts.map((post, index) => (
+            <div
+              className="  flex gap-x-6"
+              key={post._id}
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+            >
               <div className="basis-2/6">
                 <Image
                   className="cursor-pointer object-cover   h-[100px] w-full  hover:scale-105 transition-all duration-300"

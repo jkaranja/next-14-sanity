@@ -58,8 +58,8 @@ const CategoriesPreview = () => {
     <div className="   py-20 ">
       <Element name="categories" />
       <div className="pb-10 text-center" data-aos="zoom-in">
-        <div className="flex justify-center">
-          <h2 className="mb-4 font-normal">Shop by</h2>{" "}
+        <div className="flex justify-center flex-col lg:flex-row">
+          <h2 className="mb-4 ">Shop by</h2>{" "}
           <h2 className="mb-4 px-2 text-primary">category</h2>
         </div>
         <p className="text-muted-foreground">
@@ -80,8 +80,8 @@ const CategoriesPreview = () => {
           }}
           className="group md:row-span-2 h-[300px] md:h-[600px]   bg-top bg-no-repeat bg-cover flex    "
         >
-          <div className="transition-all duration-300   group-hover:bg-black/40 flex justify-center items-center grow">
-            <div className=" p-2  space-y-4 text-white max-w-[400px] invisible group-hover:visible transition-all duration-300">
+          <div className="transition-all duration-500   group-hover:bg-black/40 flex justify-center items-center grow">
+            <div className=" p-2  space-y-4 text-white max-w-[400px] invisible group-hover:visible transition-all duration-500">
               <h3>Vegetables</h3>
               <p className="line-clamp-5">
                 Explore our farm-fresh organic vegetables, bursting with flavor
@@ -103,8 +103,8 @@ const CategoriesPreview = () => {
           }}
           className="md:col-span-2 h-[300px] group   bg-top bg-no-repeat bg-cover flex    "
         >
-          <div className="transition-all duration-300   group-hover:bg-black/40 flex justify-center items-center grow">
-            <div className="p-2 space-y-4 text-white max-w-[400px] invisible group-hover:visible transition-all duration-300">
+          <div className="transition-all duration-500   group-hover:bg-black/40 flex justify-center items-center grow">
+            <div className="p-2 space-y-4 text-white max-w-[400px] invisible group-hover:visible transition-all duration-500">
               <h3>Fruits</h3>
               <p>
                 Enjoy a burst of natural sweetness and goodness in every bite.
@@ -126,8 +126,8 @@ const CategoriesPreview = () => {
           }}
           className="  h-[300px] group   bg-top bg-no-repeat bg-cover flex    "
         >
-          <div className="transition-all duration-300   group-hover:bg-black/40 flex justify-center items-center grow">
-            <div className="p-2 space-y-4 text-white max-w-[400px] invisible group-hover:visible transition-all duration-300">
+          <div className="transition-all duration-500   group-hover:bg-black/40 flex justify-center items-center grow">
+            <div className="p-2 space-y-4 text-white max-w-[400px] invisible group-hover:visible transition-all duration-500">
               <h3>Meat & Poultry</h3>
               <p>
                 Premium organic meat and poultry, raised with care-superior
@@ -150,12 +150,12 @@ const CategoriesPreview = () => {
           }}
           className="  h-[300px] group   bg-top bg-no-repeat bg-cover flex    "
         >
-          <div className="transition-all duration-300   group-hover:bg-black/40 flex justify-center items-center grow">
-            <div className=" p-2 space-y-4 text-white max-w-[400px] invisible group-hover:visible transition-all duration-300">
+          <div className="transition-all duration-500   group-hover:bg-black/40 flex justify-center items-center grow">
+            <div className=" p-2 space-y-4 text-white max-w-[400px] invisible group-hover:visible transition-all duration-500">
               <h3>Milk & Drinks</h3>
               <p>
-                Discover our diverse milk and drinks collection featuring organic
-                juices and dairy products.
+                Discover our diverse milk and drinks collection featuring
+                organic juices and dairy products.
               </p>
               <Button
                 className="text-white bg-accent"
@@ -174,8 +174,8 @@ const CategoriesPreview = () => {
           }}
           className="md:col-span-2 h-[300px] group   bg-top bg-no-repeat bg-cover flex    "
         >
-          <div className="transition-all duration-300   group-hover:bg-black/40 flex justify-center items-center grow">
-            <div className="p-2 space-y-4 text-white max-w-[400px] invisible group-hover:visible transition-all duration-300">
+          <div className="transition-all duration-500   group-hover:bg-black/40 flex justify-center items-center grow">
+            <div className="p-2 space-y-4 text-white max-w-[400px] invisible group-hover:visible transition-all duration-500">
               <h3>Fish and Seafood</h3>
               <p>
                 Explore ocean-fresh goodness in our Fish & Seafood category.

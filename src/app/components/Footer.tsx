@@ -75,19 +75,19 @@ const Footer = () => {
             <div className="mb-3">
               <div className="flex gap-x-3 items-start mb-2">
                 <div className="h-10 w-10 rounded-full bg-primary flex items-center justify-center">
-                  <Home className="h-6 w-6 text-white" />
+                  <Home className="h-6 w-6 text-secondary-foreground" />
                 </div>
                 <p className="">123 Suspendis, North American</p>
               </div>
               <div className="flex gap-x-3 items-start mb-2">
                 <div className="h-10 w-10 rounded-full bg-primary flex items-center justify-center">
-                  <Phone className="h-6 w-6 text-white" />
+                  <Phone className="h-6 w-6 text-secondary-foreground" />
                 </div>
                 <p>0987-654-32100</p>
               </div>
               <div className="flex gap-x-3 items-start mb-2">
                 <div className="h-10 w-10 rounded-full bg-primary flex items-center justify-center">
-                  <Mail className="h-6 w-6 text-white" />
+                  <Mail className="h-6 w-6 text-secondary-foreground" />
                 </div>
                 <p>support@domain.com</p>
               </div>
@@ -97,16 +97,16 @@ const Footer = () => {
 
               <div className="flex gap-x-4">
                 <div className="h-10 w-10 rounded-full bg-primary flex items-center justify-center transition-all duration-300  hover:bg-accent cursor-pointer">
-                  <Twitter className="h-6 w-6 text-white" />
+                  <Twitter className="h-6 w-6 text-secondary-foreground" />
                 </div>
                 <div className="h-10 w-10 rounded-full bg-primary flex items-center justify-center transition-all duration-300  hover:bg-accent cursor-pointer">
-                  <Facebook className="h-6 w-6 text-white" />
+                  <Facebook className="h-6 w-6 text-secondary-foreground" />
                 </div>
                 <div className="h-10 w-10 rounded-full bg-primary flex items-center justify-center transition-all duration-300  hover:bg-accent cursor-pointer">
-                  <Instagram className="h-6 w-6 text-white " />
+                  <Instagram className="h-6 w-6 text-secondary-foreground " />
                 </div>
                 <div className="h-10 w-10 rounded-full bg-primary flex items-center justify-center transition-all duration-300  hover:bg-accent cursor-pointer">
-                  <Linkedin className="h-6 w-6 text-white" />
+                  <Linkedin className="h-6 w-6 text-secondary-foreground" />
                 </div>
               </div>
             </div>
@@ -155,7 +155,7 @@ const Footer = () => {
                 placeholder="Enter your email"
                 className="rounded-e-none "
               />
-              <Button className="text-white rounded-s-none">Subscribe</Button>
+              <Button className="text-secondary-foreground rounded-s-none">Subscribe</Button>
             </div>
           </div>
         </div>
@@ -171,24 +171,24 @@ const Footer = () => {
             <Button
               variant="ghost"
               size="icon"
-              className="shadow-xl bg-white hover:bg-primary hover:text-white"
+              className="shadow-xl bg-secondary  hover:bg-primary hover:text-secondary-foreground"
             >
-              <ShoppingCart className="h-6 w-6" />
+              <ShoppingCart className="h-6 w-6 dark:text-secondary-foreground" />
             </Button>
           </CartPreview>
 
           <Button
             variant="ghost"
             size="icon"
-            className="shadow-xl bg-white hover:bg-primary hover:text-white"
+            className="shadow-xl bg-secondary hover:bg-primary hover:text-secondary-foreground"
           >
-            <Heart className="h-6 w-6" />
+            <Heart className="h-6 w-6 dark:text-secondary-foreground" />
           </Button>
 
           <Button
             variant="ghost"
             size="icon"
-            className="shadow-xl bg-white hover:bg-primary hover:text-white"
+            className="shadow-xl bg-secondary hover:bg-primary hover:text-secondary-foreground"
             onClick={() =>
               scroll.scrollToTop({
                 duration: 1500,
@@ -200,7 +200,7 @@ const Footer = () => {
               })
             }
           >
-            <ArrowUp className="h-6 w-6" />
+            <ArrowUp className="h-6 w-6 dark:text-secondary-foreground" />
           </Button>
         </div>
       )}

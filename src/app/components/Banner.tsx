@@ -25,7 +25,7 @@ const Banner = ({
       style={{
         backgroundImage:
           theme !== "dark"
-            ? `linear-gradient(to bottom, hsla(150, 80%, 47%, 0.96) 10%, hsla(20, 14.3%, 4.1%, 0.4), hsla(150, 80%, 47%, 0.3)), url(${img})`
+            ? `linear-gradient(to bottom, hsla(150, 80%, 47%, 0.97) 10%, hsla(20, 14.3%, 4.1%, 0.4), hsla(150, 80%, 47%, 0.3)), url(${img})`
             : `linear-gradient(to bottom, hsla(20, 14.3%, 4.1%, 1) 10%, hsla(20, 14.3%, 4.1%, 0.9) 50%, hsla(20, 14.3%, 4.1%, 0.6)), url(${img})`,
       }}
     >

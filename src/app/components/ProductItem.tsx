@@ -61,10 +61,10 @@ type ProductItemProps = {
 
 export default function ProductItem({ product, i }: ProductItemProps) {
   const { toast } = useToast();
-  const router = useRouter()
+  const router = useRouter();
   return (
     <div
-      // data-aos="fade-up"
+      data-aos="fade-up"
       data-aos-delay={i * 100}
       className=" py-4 group hover:shadow-md rounded-md transition-transform duration-300 ease-in-out hover:scale-105"
     >

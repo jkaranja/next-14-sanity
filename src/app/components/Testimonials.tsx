@@ -58,9 +58,9 @@ const Testimonials = () => {
           <h3 className="mb-4 text-white">Customer Reviews</h3>
         </div>
 
-        <div className=" ">
+        <div className="flex flex-col items-center ">
           <Carousel
-            className="w-full "
+            className="max-w-[70vw]  sm:max-w-[80vw] lg:max-w-[96vw]"
             opts={{
               align: "start",
             }}
