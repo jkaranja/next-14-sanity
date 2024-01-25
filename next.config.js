@@ -12,11 +12,19 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "cdn.pixabay.com", 
+        hostname: "melissas.com",
       },
       {
         protocol: "https",
-        hostname: "cdn.sanity.io", 
+        hostname: "img.freepik.com",
+      },
+      {
+        protocol: "https",
+        hostname: "cdn.pixabay.com",
+      },
+      {
+        protocol: "https",
+        hostname: "cdn.sanity.io",
       },
     ],
     //domains: ["res.cloudinary.com", "cdn.pixabay.com"], //deprecated

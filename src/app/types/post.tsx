@@ -1,12 +1,12 @@
 import { Image } from "sanity";
 import { Base } from "./base";
 
-interface Slug {
+export interface Slug {
   _type: "slug";
   current: string;
 }
 
-interface Block {
+export interface Block {
   _key: string;
   _type: "block";
   children: Span[];
@@ -21,16 +21,14 @@ interface Span {
   text: string;
 }
 
- 
-
-interface Category extends Base {
+export interface Category extends Base {
   description: string;
   title: string;
 }
 
 interface MainImage {
   _type: "image";
-  alt: string
+  alt: string;
   asset: Reference;
 }
 
@@ -41,7 +39,8 @@ export interface Post extends Base {
   body: Block[];
   publishedAt: string;
   mainImage: Image;
-  author: Author
+  author: Author;
+  tags: string[];
 }
 
 interface Author extends Base {

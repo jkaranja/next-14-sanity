@@ -2,11 +2,26 @@ import { type SchemaTypeDefinition } from "sanity";
 
 import blockContent from "./schemas/blockContent";
 import category from "./schemas/category";
+import vendor from "./schemas/vendor";
 import post from "./schemas/post";
 import author from "./schemas/author";
+import comment from "./schemas/comment";
+import product from "./schemas/product";
+import prodCategory from "./schemas/prodCategory";
+import review from "./schemas/review";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [post, author, category, blockContent],
+  types: [
+    post,
+    author,
+    category,
+    comment,
+    blockContent,
+    product,
+    review,
+    vendor,
+    prodCategory,
+  ],
 };
 
 export default schema;

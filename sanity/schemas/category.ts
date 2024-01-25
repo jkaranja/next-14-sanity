@@ -1,4 +1,4 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from "sanity";
 
 export default defineType({
   name: "category",
@@ -14,8 +14,6 @@ export default defineType({
       name: "description",
       title: "Description",
       type: "text",
-      //more on validation https://www.sanity.io/docs/validation
-      validation: (Rule) => Rule.required().min(10).max(80),
     }),
   ],
 });

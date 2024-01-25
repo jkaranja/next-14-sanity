@@ -35,7 +35,7 @@ export default defineConfig({
       //navbar: <StudioNavbar />//React.JSX.Element | React.ReactNode
       // layout: MyLayout,
       // logo: MyLogo,
-      navbar: MyEnhancedNavbar,
+      //navbar: MyEnhancedNavbar,
       // toolMenu: MyToolMenu,
     },
   },
