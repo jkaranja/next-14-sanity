@@ -1,28 +1,24 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import {
   Sheet,
-  SheetClose,
   SheetContent,
   SheetDescription,
   SheetFooter,
   SheetHeader,
   SheetTitle,
-  SheetTrigger,
+  SheetTrigger
 } from "@/components/ui/sheet";
 
-import React, { useEffect, useMemo, useState, useTransition } from "react";
-import { IItem } from "../types/cart";
-import { useRouter } from "next/navigation";
-import { useContextValue } from "../hooks/useContextValue";
-import Image from "next/image";
-import calculateDiscount from "@/lib/calculateDiscount";
-import { Minus, Plus, RotateCw, Trash, Trash2, TrashIcon } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
-import { ToastAction } from "@/components/ui/toast";
 import { useToast } from "@/components/ui/use-toast";
-import { urlForImage } from "../../../sanity/lib/image";
+import calculateDiscount from "@/lib/calculateDiscount";
+import { Minus, Plus, RotateCw, Trash2 } from "lucide-react";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+import React, { useEffect, useMemo, useState, useTransition } from "react";
+import { useContextValue } from "../hooks/useContextValue";
+import { IItem } from "../types/cart";
 
 type CartPreviewProps = {
   children: React.JSX.Element;

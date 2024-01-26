@@ -1,15 +1,12 @@
-import React, { useEffect, useState, useTransition } from "react";
+import { useEffect, useState, useTransition } from "react";
 
-import { Calendar, Diamond, Search } from "lucide-react";
-import Link from "next/link";
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
-  CardTitle,
+  CardTitle
 } from "@/components/ui/card";
+import { Calendar, Search } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -17,9 +14,9 @@ import { groq } from "next-sanity";
 
 import Image from "next/image";
 
+import { Category, Post } from "@/app/types/post";
 import { Badge } from "@/components/ui/badge";
 import { client } from "../../../../sanity/lib/client";
-import { Category, Post } from "@/app/types/post";
 import { urlForImage } from "../../../../sanity/lib/image";
 
 //posts

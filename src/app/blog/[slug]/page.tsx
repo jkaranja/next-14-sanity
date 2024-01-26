@@ -1,19 +1,18 @@
-import React from "react";
 
-import Image from "next/image";
-import { groq } from "next-sanity";
-import { client } from "../../../../sanity/lib/client";
-import { Post } from "../../types/post";
-import { urlForImage } from "../../../../sanity/lib/image";
-import { PortableText } from "@portabletext/react";
-import RichTextComponents from "@/app/components/RichTextComponents";
-import CommentForm from "./CommentForm";
 import Banner from "@/app/components/Banner";
-import { Calendar, Diamond, MessageSquare, User } from "lucide-react";
-import Link from "next/link";
+import RichTextComponents from "@/app/components/RichTextComponents";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { PortableText } from "@portabletext/react";
+import { Calendar, Diamond, MessageSquare, User } from "lucide-react";
+import { groq } from "next-sanity";
+import Image from "next/image";
+import Link from "next/link";
+import { client } from "../../../../sanity/lib/client";
+import { urlForImage } from "../../../../sanity/lib/image";
+import { Post } from "../../types/post";
+import CommentForm from "./CommentForm";
 
 type SinglePostProps = {
   params: { slug: string };

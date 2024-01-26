@@ -1,69 +1,19 @@
-import React, { useEffect, useState } from "react";
 import { client } from "../../sanity/lib/client";
 
-import { Post } from "./types/post";
-import { urlForImage } from "../../sanity/lib/image";
-import Image from "next/image";
 import { groq } from "next-sanity";
-import ClientSideRoute from "./components/ClientSideRoute";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import {
-  Eye,
-  Facebook,
-  Grape,
-  Heart,
-  Home,
-  Instagram,
-  Linkedin,
-  Mail,
-  MessageSquare,
-  MoveDown,
-  MoveRight,
-  Phone,
-  ShoppingCart,
-  StarHalf,
-  StarIcon,
-  Twitter,
-} from "lucide-react";
-import clsx from "clsx";
-import { Input } from "@/components/ui/input";
+import { Post } from "./types/post";
 
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import Link from "next/link";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-import ProductOptions from "./components/ProductOptions";
+import BlogSection from "./components/BlogSection";
+import CategoriesPreview from "./components/CategoriesPreview";
+import FeaturedProducts from "./components/FeaturedProducts";
 import HeroSection from "./components/HeroSection";
 import MainCategories from "./components/MainCategories";
 import OurProducts from "./components/OurProducts";
 import WhyUs from "./components/WhyUs";
-import FeaturedProducts from "./components/FeaturedProducts";
-import CategoryPreview from "./components/CategoriesPreview";
-import BlogSection from "./components/BlogSection";
-import CategoriesPreview from "./components/CategoriesPreview";
 
-import { IProduct } from "./types/product";
 import Testimonials from "./components/Testimonials";
+import { IProduct } from "./types/product";
 
 export const revalidate = 2; // revalidate at most every hour//in secs
 

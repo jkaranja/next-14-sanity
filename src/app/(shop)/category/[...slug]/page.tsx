@@ -1,44 +1,20 @@
 "use client";
 import { groq } from "next-sanity";
-import { usePathname, useRouter } from "next/navigation";
-import React, { useEffect, useMemo, useState, useTransition } from "react";
+import { useRouter } from "next/navigation";
+import { useEffect, useState, useTransition } from "react";
 
 import { IProduct } from "@/app/types/product";
-import Image from "next/image";
+import { Button } from "@/components/ui/button";
 import {
-  CheckSquare,
   Diamond,
   LayoutGrid,
   List,
-  Minus,
-  Plus,
   RotateCw,
-  ShoppingCart,
-  SlidersHorizontal,
-  StarIcon,
-  Trash,
+  SlidersHorizontal
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import { Separator } from "@/components/ui/separator";
-import { useContextValue } from "@/app/hooks/useContextValue";
-import { IItem } from "@/app/types/cart";
-import { client } from "../../../../../sanity/lib/client";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import { Slider } from "@/components/ui/slider";
-import { Badge } from "@/components/ui/badge";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import Banner from "@/app/components/Banner";
+import ProductItem from "@/app/components/ProductItem";
 import {
   Select,
   SelectContent,
@@ -46,13 +22,11 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import ProductItem from "@/app/components/ProductItem";
-import Banner from "@/app/components/Banner";
+import { Skeleton } from "@/components/ui/skeleton";
 import Link from "next/link";
-import { DRINKS, FRUITS, MEAT, VEGETABLES } from "@/app/constants/menu";
+import { client } from "../../../../../sanity/lib/client";
 import Filters from "./components/Filters";
 import MobileFilters from "./components/MobileFilters";
-import { Skeleton } from "@/components/ui/skeleton";
 
 type ShopProps = {
   params: { slug: string };
@@ -87,6 +61,7 @@ const Shop = ({ params: { slug } }: ShopProps) => {
         console.log;
       }
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

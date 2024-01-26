@@ -1,71 +1,34 @@
 "use client";
-import React, { useEffect, useState } from "react";
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import {
   ArrowUp,
   Diamond,
-  Eye,
   Facebook,
-  Grape,
   Heart,
   Home,
   Instagram,
   Linkedin,
   Mail,
-  MessageSquare,
-  MoveDown,
-  MoveRight,
   Phone,
   ShoppingCart,
-  StarHalf,
-  StarIcon,
-  Twitter,
+  Twitter
 } from "lucide-react";
-import clsx from "clsx";
-import { Input } from "@/components/ui/input";
 import {
-  animateScroll as scroll,
-  Element,
-  Link as ScrollLink,
-  Button as ScrollBtn,
+  animateScroll as scroll
 } from "react-scroll";
 
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { TypeAnimation } from "react-type-animation";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import Link from "next/link";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-import Image from "next/image";
-import useScrollTrigger from "../hooks/useScrollTrigger";
 import CartPreview from "../cart/CartPreview";
+import useScrollTrigger from "../hooks/useScrollTrigger";
 
 const Footer = () => {
   const trigger = useScrollTrigger({ threshold: 200 });
 
   return (
-    <div className=" flex justify-center px-4 py-16 border-t border-border mt-20 ">
+    <div className=" flex justify-center px-4 py-16  mt-20 ">
       <div className="md:w-[80vw] ">
-        <div className="grid md:grid-cols-2 xl:grid-cols-4 ">
+        <div className="grid md:grid-cols-2 xl:grid-cols-4   ">
           <div className=" basis-1/4 flex flex-col gap-y-3 p-4">
             <div className="flex items-center gap-x-1 mb-3">
               <Diamond className="h-8 w-8 text-primary " />
@@ -112,7 +75,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className=" basis-1/4  flex flex-col gap-y-3 divide-dotted divide-y justify-center divide-border   p-4  ">
+          <div className="  basis-1/4  flex flex-col gap-y-3 divide-dotted divide-y  divide-border   p-4  ">
             <h4>Information</h4>
             <p className="transition-all duration-300  hover:text-primary cursor-pointer pt-3">
               Specials
@@ -128,7 +91,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className=" basis-1/4 flex flex-col gap-y-3 divide-dotted divide-y divide-border justify-center   p-4 ">
+          <div className=" basis-1/4 flex flex-col gap-y-3 divide-dotted divide-y divide-border     p-4 ">
             <h4 className="">About us</h4>
             <p className="transition-all duration-300  hover:text-primary cursor-pointer pt-3">
               Who are we ?

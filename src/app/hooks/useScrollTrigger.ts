@@ -16,6 +16,7 @@ const useScrollTrigger = ({ threshold }: { threshold: number }) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return scrollTrigger;

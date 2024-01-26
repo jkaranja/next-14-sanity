@@ -1,12 +1,10 @@
 "use client";
-import React, { useContext, useReducer } from "react";
-import { createContext } from "react";
+import React, { createContext, useReducer } from "react";
 
 import reducer from "./reducer";
-import { IProduct } from "../types/product";
 
-import { IOrder } from "../types/order";
 import { IItem } from "../types/cart";
+import { IOrder } from "../types/order";
 
 interface ContextType extends Record<string, any> {}
 

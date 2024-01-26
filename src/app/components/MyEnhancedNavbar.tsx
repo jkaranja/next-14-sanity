@@ -1,4 +1,4 @@
-import { Stack, Card, Flex, Text } from "@sanity/ui";
+import { Card, Flex, Stack, Text } from "@sanity/ui";
 
 // Adds markup and invokes renderDefault()
 function MyEnhancedNavbar(props: any) {

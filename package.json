@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "gen": "sanity-codegen"
+    "lint": "next lint"
   },
   "dependencies": {
     "@portabletext/react": "^3.0.11",

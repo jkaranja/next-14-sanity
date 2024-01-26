@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
 import { RotateCw } from "lucide-react";
-import React, {  useState, useTransition } from "react";
+import React, { useState, useTransition } from "react";
 
 type CommentFormProps = {
   postId: string;

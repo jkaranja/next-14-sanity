@@ -1,60 +1,11 @@
 "use client";
-import React, { useEffect, useState } from "react";
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import {
-  Eye,
-  Facebook,
-  Grape,
-  Heart,
-  Home,
-  Instagram,
-  Linkedin,
-  Mail,
-  MessageSquare,
-  MoveDown,
-  MoveRight,
-  Phone,
-  ShoppingCart,
-  StarHalf,
-  StarIcon,
-  Twitter,
-} from "lucide-react";
-import clsx from "clsx";
-import { Input } from "@/components/ui/input";
-import { Element, Link as ScrollLink, Button as ScrollBtn } from "react-scroll";
 
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { TypeAnimation } from "react-type-animation";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import Link from "next/link";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-import Image from "next/image";
-import { IProduct } from "../types/product";
-import ProductOptions from "./ProductOptions";
-import { urlForImage } from "../../../sanity/lib/image";
-import { useToast } from "@/components/ui/use-toast";
-import ProductItem from "./ProductItem";
 import { useRouter } from "next/navigation";
+import { IProduct } from "../types/product";
+import ProductItem from "./ProductItem";
 
 type OurProductsProps = {
   products: IProduct[];

@@ -1,58 +1,13 @@
 "use client";
-import React, { useEffect, useState } from "react";
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import {
-  Eye,
-  Facebook,
-  Grape,
-  Heart,
-  HeartHandshake,
-  Home,
-  Instagram,
-  LeafyGreen,
-  Linkedin,
-  Mail,
-  MessageSquare,
-  MoveDown,
-  MoveRight,
-  Phone,
-  ShoppingCart,
-  StarHalf,
-  StarIcon,
-  Tractor,
-  Truck,
-  Twitter,
-} from "lucide-react";
 import clsx from "clsx";
-import { Input } from "@/components/ui/input";
-import { Element, Link as ScrollLink, Button as ScrollBtn } from "react-scroll";
+import {
+  HeartHandshake,
+  LeafyGreen,
+  Tractor,
+  Truck
+} from "lucide-react";
 
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { TypeAnimation } from "react-type-animation";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import Link from "next/link";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-import Image from "next/image";
 const WhyUs = () => {
   return (
     <div className="flex justify-center  bg-primary py-20  ">

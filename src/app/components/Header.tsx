@@ -1,21 +1,31 @@
 "use client";
 
-import * as React from "react";
-import Link from "next/link";
-import { Element, Link as ScrollLink, Button as ScrollBtn } from "react-scroll";
-import { cn } from "@/lib/utils";
-import AOS from "aos";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
+  NavigationMenuTrigger
 } from "@/components/ui/navigation-menu";
-import { ModeToggle } from "./ModeToggle";
-import { Button } from "@/components/ui/button";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger
+} from "@/components/ui/sheet";
+import { cn } from "@/lib/utils";
+import AOS from "aos";
+import clsx from "clsx";
 import {
   AlignJustify,
   Heart,
@@ -24,28 +34,12 @@ import {
   User,
   X,
 } from "lucide-react";
-import { Input } from "@/components/ui/input";
-import clsx from "clsx";
+import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
+import * as React from "react";
 import CartPreview from "../cart/CartPreview";
-import {
-  Sheet,
-  SheetClose,
-  SheetContent,
-  SheetDescription,
-  SheetFooter,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
 import { DRINKS, FRUITS, MEAT, VEGETABLES } from "../constants/menu";
-import Image from "next/image";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { ModeToggle } from "./ModeToggle";
 
 const components: { title: string; href: string; description: string }[] = [
   {

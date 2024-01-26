@@ -1,40 +1,18 @@
 "use client";
-import { groq } from "next-sanity";
-import { usePathname, useRouter } from "next/navigation";
-import React, { useEffect, useMemo, useState, useTransition } from "react";
+import { useRouter } from "next/navigation";
+import React, { useEffect, useState, useTransition } from "react";
 
-import { IProduct } from "@/app/types/product";
-import Image from "next/image";
-import {
-  CheckSquare,
-  LayoutGrid,
-  List,
-  Minus,
-  Plus,
-  ShoppingCart,
-  StarIcon,
-  Trash,
-} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import Image from "next/image";
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import { Separator } from "@/components/ui/separator";
 import { useContextValue } from "@/app/hooks/useContextValue";
 import { IItem } from "@/app/types/cart";
+import { Label } from "@/components/ui/label";
+import { Separator } from "@/components/ui/separator";
+import { Textarea } from "@/components/ui/textarea";
 
-import { ScrollArea } from "@/components/ui/scroll-area";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import { Slider } from "@/components/ui/slider";
-import { Badge } from "@/components/ui/badge";
+import { Checkbox } from "@/components/ui/checkbox";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import {
   Select,
@@ -44,11 +22,10 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import clsx from "clsx";
-import { Checkbox } from "@/components/ui/checkbox";
 import { urlForImage } from "../../../sanity/lib/image";
 
 const Checkout = () => {
-  const [isPending, startTransition] = useTransition();
+  // const [isPending, startTransition] = useTransition();
   const router = useRouter();
 
   const {
@@ -103,7 +80,12 @@ const Checkout = () => {
   //prevent loading any content if navigating to checkout if no order in state
   //This will cause error since order is null hence order.items = typeError if no optional chaining used
   //shouldn't accessing this page anyway if no orders
-  if (!order?.items) return router.push("/");
+  if (!order?.items)
+    return (
+      <div className="flex justify-center text-muted-foreground py-6">
+        <p>Order not found</p>
+      </div>
+    );
 
   return (
     <div className="">

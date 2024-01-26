@@ -1,52 +1,23 @@
-import { groq } from "next-sanity";
-import { usePathname, useRouter } from "next/navigation";
-import React, { useEffect, useMemo, useState, useTransition } from "react";
+import { useRouter } from "next/navigation";
 
-import { IProduct } from "@/app/types/product";
-import Image from "next/image";
-import {
-  CheckSquare,
-  Diamond,
-  LayoutGrid,
-  List,
-  Minus,
-  Plus,
-  ShoppingCart,
-  StarIcon,
-  Trash,
-} from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import {
+  Trash
+} from "lucide-react";
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import { Separator } from "@/components/ui/separator";
-import { useContextValue } from "@/app/hooks/useContextValue";
-import { IItem } from "@/app/types/cart";
 
-import { ScrollArea } from "@/components/ui/scroll-area";
+import { DRINKS, FRUITS, MEAT, VEGETABLES } from "@/app/constants/menu";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Slider } from "@/components/ui/slider";
 import { Badge } from "@/components/ui/badge";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import ProductItem from "@/app/components/ProductItem";
-import Banner from "@/app/components/Banner";
-import Link from "next/link";
-import { DRINKS, FRUITS, MEAT, VEGETABLES } from "@/app/constants/menu";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Slider } from "@/components/ui/slider";
 
 const Filters = () => {
   const router = useRouter();

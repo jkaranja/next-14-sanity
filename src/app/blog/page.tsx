@@ -1,29 +1,24 @@
 "use client";
 
-import React, { useEffect, useState, useTransition } from "react";
+import { useEffect, useState, useTransition } from "react";
 
-import Image from "next/image";
 import { groq } from "next-sanity";
+import Image from "next/image";
 
+import { Badge } from "@/components/ui/badge";
 import {
   Card,
-  CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
-  CardTitle,
+  CardTitle
 } from "@/components/ui/card";
-import { client } from "../../../sanity/lib/client";
-import { getPosts } from "./actions";
-import { Post } from "../types/post";
+import { Calendar, Diamond, User } from "lucide-react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { urlForImage } from "../../../sanity/lib/image";
 import Banner from "../components/Banner";
-import { Calendar, Diamond, User } from "lucide-react";
-import Link from "next/link";
-import { Badge } from "@/components/ui/badge";
-import { PortableText } from "@portabletext/react";
-import RichTextComponents from "../components/RichTextComponents";
+import { Post } from "../types/post";
+import { getPosts } from "./actions";
 import Sidebar from "./components/Sidebar";
 
 //use groq and install sanity.io vscode extension for syntax highlighting
@@ -107,6 +102,7 @@ const Blog = () => {
         }
       } catch (error) {}
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const fetchNextPage = async () => {
