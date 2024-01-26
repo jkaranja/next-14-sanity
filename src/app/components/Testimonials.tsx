@@ -120,9 +120,9 @@ const Testimonials = () => {
                       />
                     </div>
 
-                    <div className=" text-secondary-foreground  ">
+                    <div className="text-secondary ">
                       <p className="mb-4">{content}</p>
-                      <h5 className="text-foreground font-semibold mb-3 ">
+                      <h5 className="text-secondary-foreground font-semibold mb-3 ">
                         {name}
                       </h5>
                       <p className="mb-4  ">-{occupation}</p>

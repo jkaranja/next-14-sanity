@@ -113,7 +113,7 @@ const MainCategories = () => {
                 key={i}
                 data-aos="fade-up"
                 data-aos-delay={i * 100}
-                className="bg-secondary dark:border  dark:border-border-light dark:shadow-md rounded-md   min-h-[200px] min-w-80  p-4 group cursor-pointer flex flex-col items-center gap-y-2 text-center"
+                className="bg-card dark:border  dark:border-border-light dark:shadow-md rounded-md   min-h-[200px] min-w-80  p-4 group cursor-pointer flex flex-col items-center gap-y-2 text-center"
               >
                 <div className="mb-4">
                   <Image

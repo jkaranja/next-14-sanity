@@ -56,7 +56,7 @@ import Image from "next/image";
 const WhyUs = () => {
   return (
     <div className="flex justify-center  bg-primary py-20  ">
-      <div className="md:w-[80vw] flex flex-col items-center text-secondary-foreground">
+      <div className="md:w-[80vw] flex flex-col items-center text-secondary">
         <div className="pb-20 text-center">
           <h2 className="font-semibold  mb">Why choose us</h2>
         </div>

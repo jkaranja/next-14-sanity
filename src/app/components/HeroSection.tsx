@@ -62,20 +62,20 @@ const HeroSection = () => {
       }}
       className="bg-primary  bg-fixed bg-top bg-no-repeat bg-cover  h-[90vh] flex flex-col md:flex-row  justify-center md:justify-around items-center  px-4 "
     >
-      <div className="md:basis-3/6 xl:basis-5/12  flex flex-col gap-y-8 items-start  bg-black/55 p-10">
-        <h2 className="text-secondary-foreground line-clamp-3">
+      <div className="md:basis-3/6 xl:basis-5/12  flex flex-col gap-y-8 items-start  bg-accent/55 p-10">
+        <h2 className="text-secondary line-clamp-3">
           Shop Fresh Fruits, Vegetables, and More
         </h2>
 
-        <p className="text-secondary-foreground">
+        <p className="text-secondary">
           Explore our selection of premium organic food items, carefully sourced
           and thoughtfully chosen to nourish your body and delight your taste
           buds.
         </p>
 
         <Button
-          // variant="default"
-          className="shadow-md bg-accent text-accent-foreground  text-md hover:bg-accent/90 transition-all duration-300"
+          variant="default"
+          className="shadow-md   text-md  "
           size="lg"
         >
           <ShoppingCart className="mr-3 h-6 w-6" /> Shop now

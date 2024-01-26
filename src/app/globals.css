@@ -24,18 +24,18 @@
   }
 
   :root {
-    /* body style->black bg/white text color. Vice versa for dark mode */
+    /* body style->light mode: white bg/dark text color. Dark mode: black bg/white text color */
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
 
     /* primary color: green */
-    --primary: 150, 100%, 34%;
-    --primary-dark: 150, 96%, 30%;
-    --primary-light: 150, 76%, 83%;
+    --primary: 150 100% 34%;
+    --primary-dark: 150 96% 30%;
+    --primary-light: 150 76% 83%;
     --primary-foreground: 355.7 100% 97.3%;
     /* sec color:  white  */
     --secondary: 0 0% 100%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary-foreground: 240 10% 3.9%;
     /* accent color: black/dark */
     --accent: 240 5.9% 10%;
     --accent-foreground: 0 0% 98%;
@@ -62,23 +62,22 @@
 
   .dark {
     --warning: 142.1 70.6% 45.3%;
-    --warning-foreground: 144.9 80.4% 10%;
-
+    --warning-foreground: 144.9 80.4% 10%; 
     --background: 20 14.3% 4.1%;
     --foreground: 0 0% 95%;
-    --card: 24 9.8% 10%;
+    --card: 240 3.7% 15.9%;
     --card-foreground: 0 0% 95%;
     --popover: 0 0% 9%;
     --popover-foreground: 0 0% 95%;
     --primary: 142.1 70.6% 45.3%;
     --primary-dark: 142.1 70.6% 45.3%;
     --primary-light: 142.1 70.6% 45.3%;
-    --primary-foreground: 144.9 80.4% 10%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 95%;
+    --primary-foreground: 0 0% 95%;
+    --secondary: 0 0% 90%;
+    --secondary-foreground: 240 10% 3.9%;
     --muted: 0 0% 15%;
     --muted-foreground: 240 5% 64.9%;
-    --accent: 12 6.5% 15.1%;
+    --accent: 240 3.7% 15.9%;
     --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 85.7% 97.3%;

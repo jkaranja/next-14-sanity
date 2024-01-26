@@ -79,7 +79,7 @@ export default function ProductItem({ product, i }: ProductItemProps) {
         />
       </div>
       <div className="flex flex-col items-center gap-y-3 px-4">
-        <h6 className="text-foreground font-semibold text-center">
+        <h6 className=" font-semibold text-center">
           {product.title}
         </h6>
 

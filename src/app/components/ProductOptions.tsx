@@ -11,7 +11,14 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { CheckSquare, Minus, Plus, ShoppingCart, StarIcon, Trash } from "lucide-react";
+import {
+  CheckSquare,
+  Minus,
+  Plus,
+  ShoppingCart,
+  StarIcon,
+  Trash,
+} from "lucide-react";
 import Image from "next/image";
 import { useMemo, useState } from "react";
 import { useContextValue } from "../hooks/useContextValue";
@@ -96,7 +103,8 @@ export default function ProductOptions({
                 <StarIcon
                   fill="hsl(24.6 95% 53.1%)"
                   key={i}
-                  className="text-accent-foreground h-4 w-4"
+                  className="  h-4 w-4"
+                  strokeWidth={0}
                 />
               ))}
               <p className="text-primary pl-2"> (3 customer reviews)</p>

@@ -129,32 +129,32 @@ export default function Header() {
   return (
     <div
       className={clsx(
-        " w-full  dark:bg-background py-3 fixed z-10 ",
+        " w-full  dark:bg-background  fixed z-10 ",
         scrollTrigger && "bg-primary"
       )}
     >
       <div
         className={clsx(
-          " justify-center flex items-center transition-all duration-500 ease-in-out ",
+          " justify-center absolute z-20 w-full top-0 flex items-center transition-all duration-500 ease-in-out pb-4 pt-2 gap-x-3 bg-primary dark:bg-background",
           !isVisible && "hidden"
         )}
       >
         <Input
           placeholder="Search product "
-          className="h-12 rounded-3xl max-w-[60vw]"
+          className="h-12 px-4 bg-primary-dark   dark:bg-accent  border-none placeholder:text-secondary rounded-3xl max-w-[60vw]"
         />
         <Button variant="ghost" size="icon" onClick={handleToggle}>
-          <X className=" h-6 w-6 text-secondary-foreground" />
+          <X className=" h-6 w-6 text-secondary transition-all duration-300 ease-in-out hover:rotate-180" />
         </Button>
       </div>
 
-      <div className="flex  justify-evenly ">
+      <div className="flex  justify-evenly py-3">
         <NavigationMenu className="lg:hidden">
           <NavigationMenuList>
             <NavigationMenuItem className="">
               <MobileMenu>
                 <Button variant="ghost">
-                  <AlignJustify className="h-6 w-6 text-secondary-foreground" />
+                  <AlignJustify className="h-6 w-6 text-secondary" />
                 </Button>
               </MobileMenu>
             </NavigationMenuItem>
@@ -164,7 +164,7 @@ export default function Header() {
         <NavigationMenu className="hidden lg:block">
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="bg-transparent text-secondary-foreground text-lg">
+              <NavigationMenuTrigger className="bg-transparent text-secondary text-lg">
                 Organic fruits
               </NavigationMenuTrigger>
               <NavigationMenuContent className="p-6">
@@ -191,9 +191,7 @@ export default function Header() {
                     >
                       <div className="rounded-md transition-all duration-300  group-hover:bg-black/50 flex justify-center items-center grow ">
                         <div className=" p-3 invisible group-hover:visible transition-all duration-300 ">
-                          <h6 className="text-secondary-foreground text-center">
-                            {cat}
-                          </h6>
+                          <h6 className="text-secondary text-center">{cat}</h6>
                         </div>
                       </div>
                     </div>
@@ -203,7 +201,7 @@ export default function Header() {
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="bg-transparent text-secondary-foreground">
+              <NavigationMenuTrigger className="bg-transparent text-secondary">
                 Vegetables
               </NavigationMenuTrigger>
               <NavigationMenuContent className="p-6">
@@ -222,9 +220,7 @@ export default function Header() {
                     >
                       <div className="rounded-md transition-all duration-300  group-hover:bg-black/50 flex justify-center items-center grow ">
                         <div className=" p-3 invisible group-hover:visible transition-all duration-300 ">
-                          <h6 className="text-secondary-foreground text-center">
-                            {cat}
-                          </h6>
+                          <h6 className="text-secondary text-center">{cat}</h6>
                         </div>
                       </div>
                     </div>
@@ -233,7 +229,7 @@ export default function Header() {
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="bg-transparent text-secondary-foreground text-md">
+              <NavigationMenuTrigger className="bg-transparent text-secondary text-md">
                 Meat & Poultry
               </NavigationMenuTrigger>
               <NavigationMenuContent className="p-6">
@@ -252,9 +248,7 @@ export default function Header() {
                     >
                       <div className="rounded-md transition-all duration-300  group-hover:bg-black/50 flex justify-center items-center grow ">
                         <div className=" p-3 invisible group-hover:visible transition-all duration-300 ">
-                          <h6 className="text-secondary-foreground text-center">
-                            {cat}
-                          </h6>
+                          <h6 className="text-secondary text-center">{cat}</h6>
                         </div>
                       </div>
                     </div>
@@ -263,7 +257,7 @@ export default function Header() {
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="bg-transparent text-secondary-foreground text-md text-md ">
+              <NavigationMenuTrigger className="bg-transparent text-secondary text-md ">
                 Milk & Drinks
               </NavigationMenuTrigger>
               <NavigationMenuContent className="p-6">
@@ -282,9 +276,7 @@ export default function Header() {
                     >
                       <div className="rounded-md transition-all duration-300  group-hover:bg-black/50 flex justify-center items-center grow ">
                         <div className=" p-3 invisible group-hover:visible transition-all duration-300 ">
-                          <h6 className="text-secondary-foreground text-center">
-                            {cat}
-                          </h6>
+                          <h6 className="text-secondary text-center">{cat}</h6>
                         </div>
                       </div>
                     </div>
@@ -294,7 +286,7 @@ export default function Header() {
             </NavigationMenuItem>
             <NavigationMenuItem className="">
               <Link href="/blog" legacyBehavior passHref>
-                <NavigationMenuLink className="text-secondary-foreground">
+                <NavigationMenuLink className="text-secondary hover:bg-accent/50 px-3 py-2 rounded-md">
                   Blog
                 </NavigationMenuLink>
               </Link>
@@ -306,7 +298,7 @@ export default function Header() {
           <NavigationMenuList>
             <NavigationMenuItem className="">
               <Link href="/">
-                <h4 className="text-secondary-foreground italic -rotate-2 drop-shadow-2xl font-serif   ">
+                <h4 className="text-secondary italic -rotate-2 drop-shadow-2xl font-serif   ">
                   Organicly
                 </h4>
               </Link>
@@ -317,28 +309,45 @@ export default function Header() {
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem className="">
-              <Button variant="ghost" size="icon" onClick={handleToggle}>
-                <Search className=" h-6 w-6 text-secondary-foreground" />
+              <Button
+                variant="ghost"
+                className="hover:bg-accent/50"
+                size="icon"
+                onClick={handleToggle}
+              >
+                <Search className=" h-6 w-6 text-secondary" />
               </Button>
             </NavigationMenuItem>
 
             <NavigationMenuItem className="">
               <CartPreview>
-                <Button variant="ghost" size="icon">
-                  <ShoppingCart className=" h-6 w-6 text-secondary-foreground" />
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="hover:bg-accent/50"
+                >
+                  <ShoppingCart className=" h-6 w-6 text-secondary" />
                 </Button>
               </CartPreview>
             </NavigationMenuItem>
 
             <NavigationMenuItem className="">
-              <Button variant="ghost" size="icon">
-                <Heart className="h-6 w-6 text-secondary-foreground" />
+              <Button
+                variant="ghost"
+                size="icon"
+                className="hover:bg-accent/50"
+              >
+                <Heart className="h-6 w-6 text-secondary" />
               </Button>
             </NavigationMenuItem>
 
             <NavigationMenuItem className="">
-              <Button variant="ghost" size="icon">
-                <User className=" h-6 w-6 text-secondary-foreground" />
+              <Button
+                variant="ghost"
+                size="icon"
+                className="hover:bg-accent/50"
+              >
+                <User className=" h-6 w-6 text-secondary" />
               </Button>
             </NavigationMenuItem>
           </NavigationMenuList>
