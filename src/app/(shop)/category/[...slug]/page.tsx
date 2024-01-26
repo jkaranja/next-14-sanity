@@ -24,10 +24,9 @@ import {
 } from "@/components/ui/select";
 import { Skeleton } from "@/components/ui/skeleton";
 import Link from "next/link";
-import { client } from "../../../../../sanity/lib/client";
+import { getProducts } from "./actions";
 import Filters from "./components/Filters";
 import MobileFilters from "./components/MobileFilters";
-import { getProducts } from "./actions";
 
 type ShopProps = {
   params: { slug: string };

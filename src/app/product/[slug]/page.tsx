@@ -14,7 +14,7 @@ export async function generateStaticParams() {
   const query = groq`
 *[_type == "product"]  {
   slug
-  } [0...20]
+  } 
   `;
   const products = await client.fetch<IProduct[]>(query);
 
