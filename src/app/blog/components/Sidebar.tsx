@@ -1,11 +1,6 @@
 import { useEffect, useState, useTransition } from "react";
 
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Calendar, Search } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -18,6 +13,7 @@ import { Category, Post } from "@/app/types/post";
 import { Badge } from "@/components/ui/badge";
 import { client } from "../../../../sanity/lib/client";
 import { urlForImage } from "../../../../sanity/lib/image";
+import { getSidebarContent } from "../actions";
 
 //posts
 const query = groq`
@@ -43,10 +39,11 @@ const Sidebar = () => {
   useEffect(() => {
     startTransition(async () => {
       try {
-        const [posts, categories] = await Promise.all([
-          client.fetch<Post[]>(query),
-          client.fetch<Array<Category>>(catQuery),
-        ]);
+        const [posts, categories] = await getSidebarContent({
+          catQuery,
+          query,
+        });
+
         setPosts(posts);
         setCategories(categories);
       } catch (error) {

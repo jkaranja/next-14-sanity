@@ -10,7 +10,7 @@ import {
   LayoutGrid,
   List,
   RotateCw,
-  SlidersHorizontal
+  SlidersHorizontal,
 } from "lucide-react";
 
 import Banner from "@/app/components/Banner";
@@ -27,6 +27,7 @@ import Link from "next/link";
 import { client } from "../../../../../sanity/lib/client";
 import Filters from "./components/Filters";
 import MobileFilters from "./components/MobileFilters";
+import { getProducts } from "./actions";
 
 type ShopProps = {
   params: { slug: string };
@@ -53,9 +54,7 @@ const Shop = ({ params: { slug } }: ShopProps) => {
   useEffect(() => {
     startTransition(async () => {
       try {
-        const allProducts = await client.fetch<IProduct[]>(query, {
-          slug: slug[0],
-        });
+        const allProducts = await getProducts({ query, slug: slug[0] });
         setProducts(allProducts);
       } catch (error) {
         console.log;
