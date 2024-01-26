@@ -92,7 +92,7 @@ const SingleProduct = ({ product }: SingleProductProps) => {
 
       <div className=" flex justify-center px-4  py-20  ">
         <div className="md:w-[80vw] ">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-8">
             <div className="">
               <div className="h-[300px] mb-4 relative">
                 <Image
@@ -163,7 +163,6 @@ const SingleProduct = ({ product }: SingleProductProps) => {
                     size="sm"
                     variant="default"
                     key={i}
-                    className="text-accent-foreground "
                     onClick={() => handleUpdateOptions("weight", weight.grams)}
                   >
                     {weight.grams}g
@@ -199,7 +198,7 @@ const SingleProduct = ({ product }: SingleProductProps) => {
                   <Button
                     variant="outline"
                     size="icon"
-                    className="rounded-none rounded-s-3xl hover:bg-white h-12"
+                    className="rounded-none rounded-s-3xl   h-12"
                     disabled={isInCart}
                     onClick={() =>
                       handleUpdateOptions(
@@ -228,7 +227,7 @@ const SingleProduct = ({ product }: SingleProductProps) => {
                     disabled={isInCart}
                     variant="outline"
                     size="icon"
-                    className="rounded-none rounded-e-3xl hover:bg-white h-12 "
+                    className="rounded-none rounded-e-3xl   h-12 "
                     onClick={() =>
                       handleUpdateOptions("units", options.units + 1)
                     }
@@ -239,8 +238,8 @@ const SingleProduct = ({ product }: SingleProductProps) => {
                 <div className="grow ">
                   {isInCart ? (
                     <Button
-                      variant="default"
-                      className="w-full text-white bg-red-500 h-12 rounded-3xl"
+                      variant="destructive"
+                      className="w-full   h-12 rounded-3xl"
                       onClick={handleRemoveFromCart}
                     >
                       <Trash className="mr-3 h-6 w-6" /> Remove from cart
@@ -248,7 +247,7 @@ const SingleProduct = ({ product }: SingleProductProps) => {
                   ) : (
                     <Button
                       variant="default"
-                      className="w-full text-white h-12 rounded-3xl"
+                      className="w-full   h-12 rounded-3xl"
                       onClick={handleAddToCart}
                     >
                       <ShoppingCart className="mr-3 h-6 w-6" /> Add to cart
@@ -258,7 +257,7 @@ const SingleProduct = ({ product }: SingleProductProps) => {
               </div>
             </div>
             <div className="space-y-5 ">
-              <h4 className="">Related products</h4>
+              <h5 className="">Related products</h5>
               {[
                 "https://cdn.pixabay.com/photo/2021/04/14/17/45/avocado-6179050_640.jpg",
                 "https://cdn.pixabay.com/photo/2015/09/09/20/17/avocado-933060_640.jpg",

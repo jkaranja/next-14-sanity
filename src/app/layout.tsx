@@ -30,12 +30,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} `}>
         <Providers>
           <nav>
             <Header />
           </nav>
-          <main>{children}</main>
+          <main className="min-h-[70vh]">{children}</main>
           <footer>
             <Footer />
           </footer>

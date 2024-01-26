@@ -23,6 +23,9 @@ import {
 } from "@/components/ui/select";
 import clsx from "clsx";
 import { urlForImage } from "../../../sanity/lib/image";
+import Banner from "../components/Banner";
+import { Diamond } from "lucide-react";
+import Link from "next/link";
 
 const Checkout = () => {
   // const [isPending, startTransition] = useTransition();
@@ -82,26 +85,37 @@ const Checkout = () => {
   //shouldn't accessing this page anyway if no orders
   if (!order?.items)
     return (
-      <div className="flex justify-center text-muted-foreground py-6">
-        <p>Order not found</p>
+      <div>
+        <Banner>
+          <h1 className="text-4xl font-bold">Checkout</h1>
+
+          <div className="flex gap-x-3 py-2 items-center">
+            <p>
+              <Link href="/">Home</Link>{" "}
+            </p>
+            <Diamond fill="white" className="h-2 w-2" />
+            <p>Checkout</p>
+          </div>
+        </Banner>
+        <div className="flex justify-center text-muted-foreground py-10">
+          <p>Order not found</p>
+        </div>
       </div>
     );
 
   return (
     <div className="">
-      <div
-        className="flex flex-col items-center gap-y-4 text-white justify-center bg-muted py-40 bg-fixed bg-top bg-no-repeat bg-cover"
-        style={{
-          backgroundImage:
-            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 4%, rgba(0, 0, 0, 0.1)), url('/hero2.jpg')",
-        }}
-      >
-        <div className="flex items-end">
-          <h3 className="uppercase">CHECKOUT</h3>
-        </div>
+      <Banner>
+        <h1 className="text-4xl font-bold">Checkout</h1>
 
-        <p>Home / category / bananas</p>
-      </div>
+        <div className="flex gap-x-3 py-2 items-center">
+          <p>
+            <Link href="/">Home</Link>{" "}
+          </p>
+          <Diamond fill="white" className="h-2 w-2" />
+          <p>Checkout</p>
+        </div>
+      </Banner>
 
       <div className=" flex justify-center px-4  ">
         <div className="md:w-[80vw] flex gap-x-10">
@@ -276,7 +290,7 @@ const Checkout = () => {
             </form>
           </div>
 
-          <div className="p-6 grow bg-muted    min-h-[70vh]   ">
+          <div className="py-6 px-10 grow bg-muted    min-h-[70vh]   ">
             <div className="  mb-6">
               <h4 className="">Your Order</h4>
             </div>

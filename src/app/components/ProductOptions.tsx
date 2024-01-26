@@ -6,7 +6,7 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-  DialogTrigger
+  DialogTrigger,
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import calculateDiscount from "@/lib/calculateDiscount";
@@ -136,7 +136,7 @@ export default function ProductOptions({
                 >
                   <Image
                     src={img}
-                    className="object-cover rounded-md group-hover:scale-105  h-[100px] w-[100px]"
+                    className="object-contain rounded-md group-hover:scale-105  h-[100px] w-[100px]"
                     alt="Organic"
                     height={400}
                     width={400}
@@ -180,7 +180,7 @@ export default function ProductOptions({
                 <Button
                   variant="outline"
                   size="icon"
-                  className="rounded-none rounded-s-3xl hover:bg-white h-12"
+                  className="rounded-none rounded-s-3xl  h-12"
                   disabled={isInCart}
                   onClick={() =>
                     handleUpdateOptions(
@@ -209,7 +209,7 @@ export default function ProductOptions({
                   disabled={isInCart}
                   variant="outline"
                   size="icon"
-                  className="rounded-none rounded-e-3xl hover:bg-white h-12 "
+                  className="rounded-none rounded-e-3xl h-12 "
                   onClick={() =>
                     handleUpdateOptions("units", options.units + 1)
                   }
@@ -220,8 +220,8 @@ export default function ProductOptions({
               <div className="grow ">
                 {isInCart ? (
                   <Button
-                    variant="default"
-                    className="w-full text-white bg-red-500 h-12 rounded-3xl"
+                    variant="destructive"
+                    className="w-full   h-12 rounded-3xl"
                     onClick={handleRemoveFromCart}
                   >
                     <Trash className="mr-3 h-6 w-6" /> Remove from cart
@@ -229,7 +229,7 @@ export default function ProductOptions({
                 ) : (
                   <Button
                     variant="default"
-                    className="w-full text-white h-12 rounded-3xl"
+                    className="w-full   h-12 rounded-3xl"
                     onClick={handleAddToCart}
                   >
                     <ShoppingCart className="mr-3 h-6 w-6" /> Add to cart

@@ -7,7 +7,7 @@ import {
   SheetFooter,
   SheetHeader,
   SheetTitle,
-  SheetTrigger
+  SheetTrigger,
 } from "@/components/ui/sheet";
 
 import { Separator } from "@/components/ui/separator";
@@ -163,7 +163,7 @@ const CartPreview = ({ children }: CartPreviewProps) => {
                         <Button
                           variant="outline"
                           size="icon"
-                          className="rounded-none rounded-s-3xl hover:bg-white "
+                          className="rounded-none rounded-s-3xl "
                           onClick={() => handleUpdateQty(item, -1)}
                         >
                           <Minus className="h-4 w-4 " />
@@ -175,18 +175,18 @@ const CartPreview = ({ children }: CartPreviewProps) => {
                         <Button
                           variant="outline"
                           size="icon"
-                          className="rounded-none rounded-e-3xl hover:bg-white  "
+                          className="rounded-none rounded-e-3xl    "
                           onClick={() => handleUpdateQty(item, 1)}
                         >
                           <Plus className="h-4 w-4" />
                         </Button>
                       </div>
                       <Button
-                        variant="ghost"
+                        variant="destructive"
                         size="icon"
                         onClick={() => handleRemoveFromCart(item.id)}
                       >
-                        <Trash2 className="text-red-600" />
+                        <Trash2 className="  " />
                       </Button>
                     </div>
                   </div>
