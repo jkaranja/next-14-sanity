@@ -1,9 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import {
-  ShoppingCart
-} from "lucide-react";
+import { ShoppingCart } from "lucide-react";
 import { Link as ScrollLink } from "react-scroll";
 import { useTheme } from "next-themes";
 
@@ -17,10 +15,10 @@ const HeroSection = () => {
             ? "linear-gradient(to bottom, hsla(20, 14.3%, 4.1%, 1) 10%, hsla(20, 14.3%, 4.1%, 0.9) 50%, hsla(20, 14.3%, 4.1%, 0.6)), url('/hero.webp')"
             : "linear-gradient(to bottom, hsla(150, 80%, 47%, 0.6) 5%, hsla(150, 80%, 47%, 0.2), hsla(150, 80%, 47%, 0) 20%), url('/hero.webp')",
       }}
-      className="bg-primary  bg-fixed bg-top bg-no-repeat bg-cover  min-h-[90vh] pt-24  pb-20 flex flex-col md:flex-row  justify-center md:justify-around items-center  px-4 "
+      className="bg-primary  bg-fixed bg-top bg-no-repeat bg-cover  min-h-[90vh] pt-36  pb-20 flex flex-col md:flex-row  justify-center md:justify-around items-center  px-4 "
     >
-      <div className="md:basis-4/6 xl:basis-5/12  flex flex-col gap-y-8 items-start  bg-accent/55 p-10">
-        <h2 className="text-secondary line-clamp-3">
+      <div className="md:basis-5/6 lg:basis-3/4    xl:basis-7/12  flex flex-col gap-y-8 items-start  bg-accent/55 rounded-sm p-10">
+        <h2 className="text-secondary">
           Shop Fresh Fruits, Vegetables, and More
         </h2>
 
@@ -30,7 +28,6 @@ const HeroSection = () => {
           buds.
         </p>
 
-        <Button></Button>
         <ScrollLink
           to="categories"
           duration={1500}
