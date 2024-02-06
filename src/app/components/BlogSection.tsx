@@ -1,9 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import {
-  MessageSquare
-} from "lucide-react";
+import { MessageSquare } from "lucide-react";
 
 import {
   Carousel,
@@ -36,7 +34,7 @@ const BlogSection = ({ posts }: BlogSectionProps) => {
 
         <div className="flex flex-col items-center ">
           <Carousel
-            className="max-w-[70vw]  sm:max-w-[80vw] lg:max-w-[96vw]"
+            className="max-w-[70vw]  sm:max-w-[80vw]  lg:max-w-[88vw]"
             opts={{
               align: "start",
             }}

@@ -1,10 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import {
-  MoveDown,
-  MoveRight
-} from "lucide-react";
+import { MoveDown, MoveRight } from "lucide-react";
 import { Link as ScrollLink } from "react-scroll";
 
 import Image from "next/image";
@@ -114,7 +111,6 @@ const MainCategories = () => {
               <Button
                 //variant="default"
                 size="lg"
-                className=" bg-primary text-primary-foreground hover:bg-primary text-md transition-all duration-300 "
               >
                 View more
                 <MoveDown className="ml-3 h-4 w-4" />

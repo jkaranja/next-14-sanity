@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import {
   ShoppingCart
 } from "lucide-react";
-
+import { Link as ScrollLink } from "react-scroll";
 import { useTheme } from "next-themes";
 
 const HeroSection = () => {
@@ -17,9 +17,9 @@ const HeroSection = () => {
             ? "linear-gradient(to bottom, hsla(20, 14.3%, 4.1%, 1) 10%, hsla(20, 14.3%, 4.1%, 0.9) 50%, hsla(20, 14.3%, 4.1%, 0.6)), url('/hero.webp')"
             : "linear-gradient(to bottom, hsla(150, 80%, 47%, 0.6) 5%, hsla(150, 80%, 47%, 0.2), hsla(150, 80%, 47%, 0) 20%), url('/hero.webp')",
       }}
-      className="bg-primary  bg-fixed bg-top bg-no-repeat bg-cover  h-[90vh] flex flex-col md:flex-row  justify-center md:justify-around items-center  px-4 "
+      className="bg-primary  bg-fixed bg-top bg-no-repeat bg-cover  min-h-[90vh] pt-24  pb-20 flex flex-col md:flex-row  justify-center md:justify-around items-center  px-4 "
     >
-      <div className="md:basis-3/6 xl:basis-5/12  flex flex-col gap-y-8 items-start  bg-accent/55 p-10">
+      <div className="md:basis-4/6 xl:basis-5/12  flex flex-col gap-y-8 items-start  bg-accent/55 p-10">
         <h2 className="text-secondary line-clamp-3">
           Shop Fresh Fruits, Vegetables, and More
         </h2>
@@ -30,13 +30,17 @@ const HeroSection = () => {
           buds.
         </p>
 
-        <Button
-          variant="default"
-          className="shadow-md   text-md  "
-          size="lg"
+        <Button></Button>
+        <ScrollLink
+          to="categories"
+          duration={1500}
+          smooth="easeInOutQuart"
+          offset={-100}
         >
-          <ShoppingCart className="mr-3 h-6 w-6" /> Shop now
-        </Button>
+          <Button variant="default" className="shadow-md   text-md  " size="lg">
+            <ShoppingCart className="mr-3 h-6 w-6" /> Shop now
+          </Button>
+        </ScrollLink>
       </div>
 
       <div className="p-6   basis-3/6  hidden lg:block ">
